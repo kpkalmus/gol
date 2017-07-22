@@ -8,8 +8,8 @@ import com.tarosso.game.of.life.subject.utils.Position;
 
 public class Cell {
 
-	public static final Color DEAD_COLOR = Color.BLACK;
-	public static final Color ALIVE_COLOR = Color.WHITE;
+	public static final Color DEAD_COLOR = Color.WHITE;
+	public static final Color ALIVE_COLOR = Color.BLACK;
 	
 	public static List<Rule> rules;
 	
@@ -43,6 +43,10 @@ public class Cell {
 	
 	public String isAliveInt() {
 		return isAlive ? LIFE_INT : DEAD_INT;
+	}
+	
+	public Color isAliveColor() {
+		return isAlive ? ALIVE_COLOR : DEAD_COLOR;
 	}
 	
 	public void checkRules() {
